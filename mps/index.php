@@ -16,13 +16,29 @@
     </head>
     <header>
         <div class="container-fluid fixed-top">
-            <div class="row p-3 bg-light">
-                <div class="col-md-6 text-left">
-                    <a class="nav-link text-dark h1" href="index.php" title="www.websampaio.com.br">
-                        <img src="../mps/img/logo.png" width="50" height="50" class="" alt=""> WebSampaio
-                    </a>
+            <div class="row p-2 bg-light">
+                <div class="col-md-7">
+                    <div class="row justify-content-end">
+                        <div class="col-md-12 text-left">
+                            <a class="nav-link text-secondary h2" href="index.php" title="www.websampaio.com.br">
+                                <img src="../mps/img/logo.png" width="40" height="40" class="" alt=""> WebSampaio
+                            </a>
+                        </div>
+                        <div class="col-md-2 mx-1 bg-transparent rounded text-center">
+                            <a class="nav-link p-0 text-secondary" href="#"><b>Link A</b></a>
+                        </div>
+                        <div class="col-md-2 mx-1 bg-transparent rounded text-center">
+                            <a class="nav-link p-0 text-secondary" href="#"><b>Link B</b></a>
+                        </div>
+                        <div class="col-md-2 mx-1 bg-transparent rounded text-center">
+                            <a class="nav-link p-0 text-secondary" href="#"><b>Link C</b></a>
+                        </div>
+                        <div class="col-md-2 mx-1 bg-transparent rounded text-center">
+                            <a class="nav-link p-0 text-secondary" href="#"><b>Link D</b></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-2 text-center">
+                <div class="col-md-1 text-center">
 
                 </div>
                 <div class="col-md-4 bg-secondary rounded">
@@ -45,13 +61,21 @@
         </div>
     </header>
     <body>
-        <div class="bg-info" Style="height: 800px">
-
+        <div class="pt-5 py-3 mt-4 bg-success" Style="height: 100%">
+            <div class="mt-5 my-4 mx-5 h-25 bg-warning rounded">
+                
+            </div>
+            <div class="my-4 mx-5 h-25 bg-primary rounded">
+                
+            </div>
+            <div class="my-4 mx-5 h-25 bg-white rounded">
+                
+            </div>
         </div>
     </body>
     <footer>
         <div class="container-fluid fixed-bottom">
-            <div class="row p-3 bg-dark">
+            <div class="row p-2 bg-dark">
                 <div class="col-sm-4 text-md-left text-sm-center">
                     <a class="nav-link p-0 text-light" href="index.php" title="www.websampaio.com.br">www.websampaio.com.br</a>
                 </div>
