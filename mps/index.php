@@ -1,4 +1,5 @@
-﻿<html lang="pt-br">
+﻿<!doctype html>
+<html lang="pt-br">
     <head>
         <meta http-equiv="content-Type" content="text/html; charset=utf-8" />  
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,46 +14,43 @@
 
         <!-- Bootstrap (CSS e JS) -->
         <link href="../mps/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="../mps/css/estilos.css" rel="stylesheet">
     </head>
     <header>
         <div class="container-fluid fixed-top">
-            <div class="row p-2 bg-light">
-                <div class="col-md-7">
-                    <div class="row justify-content-end">
-                        <div class="col-md-12 text-left">
-                            <a class="nav-link text-secondary h2" href="index.php" title="www.websampaio.com.br">
-                                <img src="../mps/img/logo.png" width="40" height="40" class="" alt=""> WebSampaio
-                            </a>
+            <div class="row fundo-verde justify-content-around">
+                <div class="col-sm-8">
+                    <div class="row my-2">
+                        <div class="col-sm-4 text-left align-self-center">
+                            <a class="text-white h6" href="index.php" title="www.websampaio.com.br">Plataforma</a>
+                            <a class="nav-link text-white h3 p-0" href="index.php" title="www.websampaio.com.br">WebSampaio</a>
                         </div>
-                        <div class="col-md-2 mx-1 bg-transparent rounded text-center">
-                            <a class="nav-link p-0 text-secondary" href="#"><b>Link A</b></a>
+                        <div class="col-sm-2 px-2 mt-5 text-center rounded">
+                            <a class="nav-link p-0 bg-info text-white rounded" href="#"><b>Link A</b></a>
                         </div>
-                        <div class="col-md-2 mx-1 bg-transparent rounded text-center">
-                            <a class="nav-link p-0 text-secondary" href="#"><b>Link B</b></a>
+                        <div class="col-sm-2 px-2 mt-5 text-center rounded">
+                            <a class="nav-link p-0 bg-info text-white rounded" href="#"><b>Link B</b></a>
                         </div>
-                        <div class="col-md-2 mx-1 bg-transparent rounded text-center">
-                            <a class="nav-link p-0 text-secondary" href="#"><b>Link C</b></a>
+                        <div class="col-sm-2 px-2 mt-5 text-center rounded">
+                            <a class="nav-link p-0 bg-info text-white rounded" href="#"><b>Link C</b></a>
                         </div>
-                        <div class="col-md-2 mx-1 bg-transparent rounded text-center">
-                            <a class="nav-link p-0 text-secondary" href="#"><b>Link D</b></a>
+                        <div class="col-sm-2 px-2 mt-5 text-center rounded">
+                            <a class="nav-link p-0 bg-info text-white rounded" href="#"><b>CONTATO</b></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 text-center">
-
-                </div>
-                <div class="col-md-4 bg-secondary rounded">
-                    <div Class="col-md-3 p-0 mt-1 text-light h6"><i class="fas fa-user fa-md fa-fw text-light"></i> Login</div>
-                    <form>
+                <div class="col-sm-3 border-left border-secondary align-self-center">
+                    <div Class="col-sm-3 p-0 mt-2 text-light h6"><i class="fas fa-user fa-md fa-fw text-light"></i> Login</div>
+                    <form class="m-0">
                         <div Class="form-row">
-                            <div class="form-group my-1 col-lg-5">
-                                <input class="form-control" type="text" style="text-transform: uppercase;" placeholder="USUÁRIO">
+                            <div class="form-group col-sm-5">
+                                <input class="form-control form-control-sm" type="text" style="text-transform: uppercase;" placeholder="USUÁRIO">
                             </div>
-                            <div class="form-group my-1 col-lg-5">
-                                <input class="form-control" type="password" style="text-transform: uppercase;" placeholder="SENHA">
+                            <div class="form-group col-sm-5">
+                                <input class="form-control form-control-sm" type="password" style="text-transform: uppercase;" placeholder="SENHA">
                             </div>
-                            <div class="form-group my-1 col-lg-2 text-sm-center">
-                                <button class="btn btn-info" type="submit" title="Entrar">Entrar</button>
+                            <div class="form-group col-sm-2 text-sm-center">
+                                <button class="btn btn-sm btn-light" type="submit" title="Entrar">Entrar</button>
                             </div>
                         </div>
                     </form>
@@ -61,21 +59,13 @@
         </div>
     </header>
     <body>
-        <div class="pt-5 py-3 mt-4 bg-success" Style="height: 100%">
-            <div class="mt-5 my-4 mx-5 h-25 bg-warning rounded">
-                
-            </div>
-            <div class="my-4 mx-5 h-25 bg-primary rounded">
-                
-            </div>
-            <div class="my-4 mx-5 h-25 bg-white rounded">
-                
-            </div>
+        <div id="site">
+            <div class="h2 mt-2 p-4 bg-secondary text-white text-center rounded">GERÊNCIE SEU NEGÓCIO DE QUALQUER LUGAR</div>
         </div>
     </body>
     <footer>
         <div class="container-fluid fixed-bottom">
-            <div class="row p-2 bg-dark">
+            <div class="row p-2 fundo-verde">
                 <div class="col-sm-4 text-md-left text-sm-center">
                     <a class="nav-link p-0 text-light" href="index.php" title="www.websampaio.com.br">www.websampaio.com.br</a>
                 </div>
