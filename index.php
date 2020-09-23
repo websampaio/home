@@ -4,17 +4,17 @@
         <meta http-equiv="content-Type" content="text/html; charset=utf-8" />  
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title id='titulo'>WebSampaio - HOME</title>
-        <link href="../mps/img/logo.png" rel="icon">
+        <link href="../home/img/logo.png" rel="icon">
         
         <!-- Biblioteca de icones  -->
         <script src="https://kit.fontawesome.com/26715a91f4.js" crossorigin="anonymous"></script>
 
         <!-- jquery JS  -->
-        <script src="../mps/js/jquery-3.5.1.min.js"></script>
+        <script src="../home/js/jquery-3.5.1.min.js"></script>
 
         <!-- Bootstrap (CSS e JS) -->
-        <link href="../mps/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <link href="../mps/css/estilos.css" rel="stylesheet">
+        <link href="../home/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="../home/css/estilos.css" rel="stylesheet">
     </head>
     <header>
         <div class="container-fluid fixed-top">
@@ -35,7 +35,7 @@
                             <a class="nav-link p-0 bg-info text-white rounded" href="#"><b>Link C</b></a>
                         </div>
                         <div class="col-sm-2 px-2 mt-5 text-center rounded">
-                            <a class="nav-link p-0 bg-info text-white rounded" href="#"><b>CONTATO</b></a>
+                            <a class="nav-link p-0 bg-info text-white rounded" href="http://websampaio.com.br/e-painel/"><b>E-PAINEL</b></a>
                         </div>
                     </div>
                 </div>

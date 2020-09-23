@@ -12,7 +12,7 @@ body, html {
 }
 
 body {
-	background: url(/mps/mps/img/fundo.jpg) center center no-repeat fixed;
+	background: url(/home/img/fundo.jpg) center center no-repeat fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
