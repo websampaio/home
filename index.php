@@ -23,7 +23,7 @@
                     <div class="row my-2">
                         <div class="col-sm-4 text-left align-self-center">
                             <a class="text-white h6" href="index.php" title="www.websampaio.com.br">Plataforma</a>
-                            <a class="nav-link text-white h3 p-0" href="index.php" title="www.websampaio.com.br">WebSampaio</a>
+                            <a class="nav-link text-white h3 p-0" style="font-weight: 900" href="index.php" title="www.websampaio.com.br">Web<span class="text-info">Sampaio<span></a>
                         </div>
                         <div class="col-sm-2 px-2 mt-5 text-center rounded">
                             <a class="nav-link p-0 bg-info text-white rounded" href="#"><b>Link A</b></a>
@@ -44,13 +44,13 @@
                     <form class="m-0">
                         <div Class="form-row">
                             <div class="form-group col-sm-5">
-                                <input class="form-control form-control-sm" type="text" style="text-transform: uppercase;" placeholder="USUÁRIO">
+                                <input class="form-control form-control-sm" type="text" style="text-transform: uppercase;" placeholder="USUÁRIO" required>
                             </div>
                             <div class="form-group col-sm-5">
-                                <input class="form-control form-control-sm" type="password" style="text-transform: uppercase;" placeholder="SENHA">
+                                <input class="form-control form-control-sm" type="password" style="text-transform: uppercase;" placeholder="SENHA" required>
                             </div>
                             <div class="form-group col-sm-2 text-sm-center">
-                                <button class="btn btn-sm btn-light" type="submit" title="Entrar">Entrar</button>
+                                <button class="btn btn-sm btn-info" type="submit" title="Entrar">Acessar</button>
                             </div>
                         </div>
                     </form>
