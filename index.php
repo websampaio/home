@@ -1,21 +1,8 @@
-﻿<!doctype html>
+﻿<?php
+    include_once("../home/includes/head.php"); // Inclui chamadas do head no PHP
+?>
+<!doctype html>
 <html lang="pt-br">
-    <head>
-        <meta http-equiv="content-Type" content="text/html; charset=utf-8" />  
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title id='titulo'>WebSampaio - HOME</title>
-        <link href="../home/img/logo.png" rel="icon">
-        
-        <!-- Biblioteca de icones  -->
-        <script src="https://kit.fontawesome.com/26715a91f4.js" crossorigin="anonymous"></script>
-
-        <!-- jquery JS  -->
-        <script src="../home/js/jquery-3.5.1.min.js"></script>
-
-        <!-- Bootstrap (CSS e JS) -->
-        <link href="../home/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <link href="../home/css/estilos.css" rel="stylesheet">
-    </head>
     <header>
         <div class="container-fluid fixed-top">
             <div class="row fundo-verde justify-content-around">
@@ -40,34 +27,95 @@
                     </div>
                 </div>
                 <div class="col-sm-3 border-left border-secondary align-self-center">
-                    <div Class="col-sm-3 p-0 mt-2 text-light h6"><i class="fas fa-user fa-md fa-fw text-light"></i> Login</div>
-                    <form class="m-0">
+                    <div Class="col-sm-6 p-0 mt-2 text-light h6">
+                        <i class="fas fa-user fa-md fa-fw text-light"></i> Login
+                    </div>
+                    <form>
                         <div Class="form-row">
-                            <div class="form-group col-sm-5">
+                            <div class="col-sm-5 m-0 form-group">
                                 <input class="form-control form-control-sm" type="text" style="text-transform: uppercase;" placeholder="USUÁRIO" required>
                             </div>
-                            <div class="form-group col-sm-5">
+                            <div class="col-sm-5 m-0 form-group">
                                 <input class="form-control form-control-sm" type="password" style="text-transform: uppercase;" placeholder="SENHA" required>
                             </div>
-                            <div class="form-group col-sm-2 text-sm-center">
-                                <button class="btn btn-sm btn-info" type="submit" title="Entrar">Acessar</button>
+                            <div class="col-sm-2 mb-1 form-group text-sm-center">
+                                <button class="btn btn-sm btn-info" type="submit" title="Acessar">Acessar</button>
                             </div>
                         </div>
                     </form>
+                    <div class="row justify-content-between">
+                        <div class="col-sm-4 my-1">
+                            <button type="button" class="btn btn-outline-info btn-sm text-white" style="font-size: 11px; font-weight: 600" data-toggle="modal" data-target="#ModalCadastro"><i class="fas fa-user-plus fa-sm fa-fw"></i> Cadastre-se aqui</button>
+                        </div>
+                        <div class="col-sm-5 ml-3 my-1">
+                            <button type="button" class="btn btn-outline-info btn-sm text-white" style="font-size: 11px; font-weight: 600" data-toggle="modal" data-target="#ModalCadastro"><i class="fas fa-lock fa-sm fa-fw"></i> Esqueci minha senha</button>
+                        </div>
+                        <div class="col-sm-2 my-1">
+                        
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
     <body>
+        <!-- Inicio Modal Cadastro -->
+        <div class="modal fade" id="ModalCadastro" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title text-white" id="ModalLabel"><i class="fas fa-user-plus fa-lg fa-fw"></i> Cadastre-se e conheça nossa plataforma.</h5>
+                        <button type="button" class="close text-white" data-dismiss="modal" onclick="" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form class="was-validated" method="POST" action="cadastro.php" enctype="multipart/form-data" autocomplete="off">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-4 form-group">
+                                    <select id="tipo" name="tipo" class="custom-select text-secondary" required>
+                                        <option value="" disabled selected>SELECIONE TIPO</option>
+                                        <option value="1">PESSOA FÍSICA</option>
+                                        <option value="2">PESSOA JURÍDICA</option>
+                                    </select>
+                                </div>  
+                                <div class="col-5 form-group">
+                                    <input class="form-control is-invalid maiusculo" type="text" id="cnpj_cpf" name="cnpj_cpf" onKeyPress="SoNumero(this);" onKeyPress="MascaraCNPJ_CPF(this);" maxlenght="18" placeholder="CPF / CNPJ" required/>
+                                </div>                                
+                                <div class="col-9 form-group">
+                                    <input class="form-control is-invalid maiusculo" type="text" id="nome" name="nome" placeholder="NOME COMPLETO" required autocomplete="off"/>
+                                </div>
+                                <div class="col-6 form-group">
+                                    <span class="text-secondary">Especialidade 1</span>
+                                    <select id="add_especialidade_1" name="add_especialidade_1" class="custom-select text-secondary" required>
+                                        <option value="" disabled selected>SELECIONE A ESPECIALIDADE 1</option>
+                                        <?php
+                                            $sel_especialidades = mysqli_query($conn, "SELECT * FROM especialidades ORDER BY especialidade");
+                                            while($lista_especialidades = mysqli_fetch_array($sel_especialidades)) { ?>
+                                                <option value="<?php echo $lista_especialidades['id_especialidade'];?>"><?php echo $lista_especialidades['especialidade'];?></option>
+                                        <?php }?>
+                                    </select>
+                                </div>  
+                            </div>
+                        </div>                       
+                        <div class="modal-footer">
+                            <button type="submit" id="gravar" name="gravar" value="gravar" class="btn btn-success" disabled="disabled"><i class="fas fa-save fa-lg fa-fw"></i> Gravar</button>
+                            <button class="btn btn-danger " data-dismiss="modal" onclick=""><i class="fas fa-times-circle fa-lg fa-fw"></i> Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Fim Modal Cadastro -->
         <div id="site">
             <div class="h2 mt-2 p-4 bg-secondary text-white text-center rounded">GERÊNCIE SEU NEGÓCIO DE QUALQUER LUGAR</div>
         </div>
     </body>
     <footer>
-        <div class="container-fluid fixed-bottom">
+        <div class="container-fluid fixed-bottom" style="font-size: 14px">
             <div class="row p-2 fundo-verde">
                 <div class="col-sm-4 text-md-left text-sm-center">
-                    <a class="nav-link p-0 text-light" href="index.php" title="www.websampaio.com.br">www.websampaio.com.br</a>
+                    <a class="nav-link p-0 text-light" href="mailto:mpsampaio@websampaio.com.br" title="mpsampaio@websampaio.com.br">Contato: mpsampaio@websampaio.com.br</a>
                 </div>
                 <div class="col-sm-4 text-center">
 
