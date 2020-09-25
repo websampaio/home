@@ -37,10 +37,10 @@ p {
     background-color: #033146; 
 }
 
-h3 {
-	color: #fff;
-	margin: 0;
+  .maiusculo {
 	text-transform: uppercase;
-	font-size: 22px;
-	font-weight: 900;
+  }
+  
+  .minusculo {
+	text-transform: lowercase;
   }

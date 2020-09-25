@@ -61,7 +61,7 @@
     <body>
         <!-- Inicio Modal Cadastro -->
         <div class="modal fade" id="ModalCadastro" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-primary">
                         <h5 class="modal-title text-white" id="ModalLabel"><i class="fas fa-user-plus fa-lg fa-fw"></i> Cadastre-se e conheça nossa plataforma.</h5>
