@@ -18,5 +18,6 @@
     <link href="../home/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <script src="../home/js/dataTables.bootstrap4.min.js"></script>
     <script src="../home/js/bootstrap.bundle.min.js"></script>
+    <script src="../home/js/jquery.mask.js"></script>
     <script src="../home/js/funcoes.js"></script>
 </html>

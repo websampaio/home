@@ -63,7 +63,7 @@
         <div class="modal fade" id="ModalCadastro" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-info">
                         <h5 class="modal-title text-white" id="ModalLabel"><i class="fas fa-user-plus fa-lg fa-fw"></i> Cadastre-se e conheça nossa plataforma.</h5>
                         <button type="button" class="close text-white" data-dismiss="modal" onclick="" aria-label="Fechar">
                             <span aria-hidden="true">&times;</span>
@@ -72,15 +72,15 @@
                     <form class="was-validated" method="POST" action="cadastro.php" enctype="multipart/form-data" autocomplete="off">
                         <div class="modal-body">
                             <div class="row">
-                                <div class="col-4 form-group">
+                                <div class="col-6 form-group">
                                     <select id="tipo" name="tipo" class="custom-select text-secondary" required>
                                         <option value="" disabled selected>SELECIONE TIPO</option>
                                         <option value="1">PESSOA FÍSICA</option>
                                         <option value="2">PESSOA JURÍDICA</option>
                                     </select>
                                 </div>  
-                                <div class="col-5 form-group">
-                                    <input class="form-control is-invalid maiusculo" type="text" id="cnpj_cpf" name="cnpj_cpf" onKeyPress="SoNumero(this);" onKeyPress="MascaraCNPJ_CPF(this);" maxlenght="18" placeholder="CPF / CNPJ" required/>
+                                <div class="col-6 form-group">
+                                    <input class="form-control is-invalid maiusculo" type="text" data-mask-for-cpf-cnpj id="cpf_cnpj" name="cpf_cnpj" maxlenght="18" placeholder="CPF / CNPJ" required/>
                                 </div>                                
                                 <div class="col-9 form-group">
                                     <input class="form-control is-invalid maiusculo" type="text" id="nome" name="nome" placeholder="NOME COMPLETO" required autocomplete="off"/>
@@ -126,7 +126,15 @@
             </div>
         </div>
     </footer>
-    <script>
+    <script>        
+        // Função Mascara de CNPJ e CPF
+        $(document).on('keydown', '[data-mask-for-cpf-cnpj]', function (e) {
+            var digit = e.key.replace(/\D/g, '');
+            var value = $(this).val().replace(/\D/g, '');
+            var size = value.concat(digit).length;
+            $(this).mask((size <= 11) ? '000.000.000-00' : '00.000.000/0000-00');
+        });
+
         // Função para formatar 1 em 01
         const zeroFill = n => {
             return ('0' + n).slice(-2);
